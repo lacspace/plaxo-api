@@ -1,13 +1,9 @@
 // controllers/analyticsController.ts
 import { Request, Response } from 'express';
 import Contact from '../models/Contact';
-import DemoRequest from '../models/DemoRequest';
 import Visitor from '../models/Visitor';
-import Project from '../models/Project';
 import Service from '../models/Service';
 import Testimonial from '../models/Testimonial';
-import Newsletter from '../models/Newsletter';
-import Story from '../models/Story';
 import Promotion from '../models/Promotion';
 import OpenPosition from '../models/OpenPosition';
 import CandidateApplication from '../models/CandidateApplication';
@@ -51,13 +47,9 @@ export const getAllAnalyticsSummary = async (_req: Request, res: Response) => {
   try {
     const collections = [
       { model: Contact, label: 'contacts' },
-      { model: DemoRequest, label: 'demoRequests' },
       { model: Visitor, label: 'visitors' },
-      { model: Project, label: 'projects' },
       { model: Service, label: 'services' },
       { model: Testimonial, label: 'testimonials' },
-      { model: Newsletter, label: 'newsletterSubscribers' },
-      { model: Story, label: 'stories' },
       { model: Promotion, label: 'promotions' },
       { model: CandidateApplication, label: 'candidateApplications' },
       { model: OpenPosition, label: 'openPositions' },
